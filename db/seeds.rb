@@ -1,7 +1,23 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+Produkt.create(:nazwa => 'Testowy produkt',
+  :opis => 
+    %{<p>
+        <em>Teścik</em> to jest testowy produkt
+      </p>},
+  :obraz_url =>   'http://insolitebuzz.fr/wp-content/uploads/2014/10/test-all-the-things.jpg',    
+  :cena => 42.95)
+# . . .
+Produkt.create(:nazwa => 'Testowy produkt 2',
+  :opis => 
+    %{<p>
+        <em>Teścik 2</em> to jest testowy produkt
+      </p>},
+  :obraz_url =>   'http://insolitebuzz.fr/wp-content/uploads/2014/10/test-all-the-things.jpg',    
+  :cena => 42.95)
+
+Produkt.create(:nazwa => 'Testowy produkt 3 ',
+  :opis => 
+    %{<p>
+        <em>Teścik 3</em> to jest testowy produkt
+      </p>},
+  :obraz_url =>   'http://insolitebuzz.fr/wp-content/uploads/2014/10/test-all-the-things.jpg',    
+  :cena => 42.95)

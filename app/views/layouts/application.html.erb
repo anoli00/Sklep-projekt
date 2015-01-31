@@ -6,9 +6,18 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body id="sklep">
+  <div id="banner">
+    <!-- <%= image_tag("https://cdn2.iconfinder.com/data/icons/maki/100/shop-128.png") %> -->
+    <%= @page_title || "Sklep" %>
+  </div>
+  <div id="columns">
+    <div id="side">
+      NAWIGACJA
+    </div>
+    <div id="main">
+      <%= yield %><!-- <label id="code.depot.e.include"/> -->
+    </div>
+  </div>
 </body>
 </html>

@@ -1,0 +1,17 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Katalog produktów</h1>
+
+<% @produkty.each do |produkt| %>
+  <div class="entry">
+    <%= image_tag(produkt.obraz_url) %>
+    <h3><%= produkt.nazwa %></h3>
+    <!-- dla wyświetlania HTML-a -->
+    <%= sanitize(produkt.opis) %>
+    <div class="price_line">
+      <span class="price"><%= sprintf("%0.02f zł", produkt.cena) %></span>
+    </div>
+  </div>
+<% end %>

@@ -7,6 +7,10 @@ class ProduktsController < ApplicationController
     @produkts = Produkt.all
   end
 
+  def opis
+    
+  end
+
   # GET /produkts/1
   # GET /produkts/1.json
   def show
