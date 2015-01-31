@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
+   devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register' }
   resources :produkts
 
    root :to => 'sklep#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -10,7 +12,9 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  devise_scope :user do
+    get "/administrator" => "devise/sessions#new"
+  end
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
